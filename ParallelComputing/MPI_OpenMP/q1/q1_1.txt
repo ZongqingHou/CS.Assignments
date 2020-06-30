@@ -1,0 +1,1 @@
+Because the dimension of each matrix is 1024, so for the choice a, which is only the outermost loop is parallelized, the process will fork and create 1024 threads to excute the codes which are in the for loop, and after excution, all threads will wait at the "}" of the outermost loop until other threads finish the inner code of the outermost loop. 

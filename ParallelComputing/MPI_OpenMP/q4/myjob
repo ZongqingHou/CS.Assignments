@@ -1,0 +1,10 @@
+#!/bin/bash
+#$ -cwd
+#$ -o /dev/null
+#$ -e /dev/null
+# Set the number of MPI processes here:
+#$ -pe mpi 4
+# Set the number of OpenMP threads here:
+setenv OMP_NUM_THREADS 10
+# Change the name of the execuatable here:
+mpirun --map-by node ./julia > output.txt

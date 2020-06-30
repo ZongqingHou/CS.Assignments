@@ -1,0 +1,9 @@
+#!/bin/bash
+# name of your executable
+PROG=hybrid
+# name of your host file
+HOSTFILE=hosts.txt
+# number of processes
+NUM_PROCS=2
+
+mpirun -np $NUM_PROCS --hostfile $HOSTFILE --map-by node $PROG $1
